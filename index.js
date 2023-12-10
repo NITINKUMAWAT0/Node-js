@@ -1,38 +1,22 @@
-const lib=require('./lib.js');
-const os = require('os');
+const http = require('http');
+const fs = require('fs');
+// const { json } = require('stream/consumers');
 
-console.log(lib.sum(43 ,10));
-console.log(lib.div(10,5));
+const index = fs.readFileSync('index.html','utf-8');
+const jsonData = fs.readFileSync('data.json','utf-8');
 
-const platform = os.platform();
-console.log(platform); 
+const data = { age: 5 };
+const server = http.createServer((req, res) => {
 
-const arch = os.arch();
-console.log(arch);
+    console.log("server started!!");
+    res.setHeader('heading', 'info');
+    res.setHeader('content-type','application/JSON');
+    // res.setHeader('content-type','text/html');
+    // res.end(JSON.stringify(data));
+    // res.end(index);
+    res.end(jsonData);
 
-const cpus = os.cpus();
-console.log(cpus);
+});
 
-const freemen = os.freemem();
-console.log(freemen);
 
-const type = os.type();
-console.log(type);
-
-const info = os.userInfo();
-console.log(info);
-
-const upTime = os.uptime();
-console.log(upTime);
-
-const version = os.version();
-console.log(version);
-
-const totalmem = os.totalmem();
-console.log(totalmem);
-
-const tmpdir = os.tmpdir();
-console.log(tmpdir);
-
-const release = os.release();
-console.log(release);
+server.listen(5000);
