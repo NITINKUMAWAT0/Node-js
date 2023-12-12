@@ -15,7 +15,6 @@ const server = http.createServer((req, res) => {
     // res.end(JSON.stringify(data));
     // res.end(index);
     res.end(jsonData);
-
 });
 
 
