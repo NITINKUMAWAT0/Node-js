@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cart</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .cart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    .cart-item {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      width: 25%;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-info {
+      padding: 10px;
+    }
+
+    .product-info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .quantity {
+      font-style: italic;
+    }
+
+    .remove-btn {
+      background-color: #f00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .total-container {
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total-text {
+      font-weight: bold;
+    }
+
+    .total-price {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .checkout-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <h1>hello guyzz</h1>
+  <div class="cart-container">
+    <div class="cart-item">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.TqRgd0FAlCJEdKQrIgyqtAHaE8&pid=Api&P=0&h=180" alt="Product 1 Image">
+      <div class="product-info">
+        <h3>Product 1</h3>
+        <p>Product Description</p>
+        <span class="price">$19.99</span>
+        <span class="quantity">Quantity: 1</span>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+  <!-- </div>
+  <div class="total-container">
+    <p class="total-text">Total:</p>
+    <span class="total-price">$19.99</span>
+    <button class="checkout-btn">Checkout</button>
+  </div> -->
 </body>
 </html>
