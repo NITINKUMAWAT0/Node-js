@@ -1,5 +1,5 @@
-[
-    {
+{"products":[
+   {
       "albumId": 1,
       "id": 1,
       "title": "accusamus beatae ad facilis cum similique qui sunt",
@@ -189,3 +189,5 @@
       "thumbnailUrl": "https://via.placeholder.com/150/c984bf"
     }
 ]
+
+}
